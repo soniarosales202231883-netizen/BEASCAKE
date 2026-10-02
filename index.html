@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bea's Cake | Un pastel, un momento</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: #fff8fa;
+            color: #51382f;
+        }
+
+        /* ENCABEZADO */
+        header {
+            background: #f8dce7;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            color: #b94e79;
+            font-size: 30px;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #51382f;
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #d65d91;
+        }
+
+        /* INICIO */
+        .inicio {
+            min-height: 480px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(
+                rgba(255, 238, 245, .85),
+                rgba(255, 238, 245, .85)
+            ),
+            url("media/image1.png") center/contain no-repeat;
+        }
+
+        .inicio h1 {
+            font-size: 48px;
+            color: #b94e79;
+            margin-bottom: 15px;
+        }
+
+        .inicio p {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        .boton {
+            display: inline-block;
+            background: #c85e8b;
+            color: white;
+            padding: 13px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .boton:hover {
+            background: #9e416a;
+        }
+
+        /* SECCIONES */
+        section {
+            padding: 65px 8%;
+        }
+
+        .titulo {
+            text-align: center;
+            color: #b94e79;
+            font-size: 32px;
+            margin-bottom: 35px;
+        }
+
+        /* PRODUCTOS */
+        .productos {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit, minmax(230px, 1fr)
+            );
+            gap: 25px;
+        }
+
+        .producto {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 4px 15px #e9cbd6;
+            padding-bottom: 25px;
+        }
+
+        .producto img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .producto h3 {
+            color: #b94e79;
+            margin: 18px 0 10px;
+        }
+
+        .producto p {
+            padding: 0 15px;
+            line-height: 1.6;
+        }
+
+        /* QUIENES SOMOS */
+        .nosotros {
+            background: #fbe5ed;
+            text-align: center;
+            line-height: 1.9;
+        }
+
+        .nosotros p {
+            max-width: 850px;
+            margin: auto;
+            font-size: 17px;
+        }
+
+        /* MISION Y VISION */
+        .contenedor {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit, minmax(250px, 1fr)
+            );
+            gap: 25px;
+        }
+
+        .tarjeta {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 12px #ead2db;
+        }
+
+        .tarjeta h3 {
+            color: #c85e8b;
+            margin-bottom: 15px;
+        }
+
+        /* VALORES */
+        .valores {
+            background: #fff0f5;
+            text-align: center;
+        }
+
+        .valores ul {
+            list-style: none;
+            line-height: 2.3;
+            font-size: 18px;
+        }
+
+        /* PEDIDOS */
+        .pedidos {
+            text-align: center;
+            background: #fbe5ed;
+        }
+
+        .pedidos p {
+            margin-bottom: 25px;
+            font-size: 18px;
+        }
+
+        /* PIE DE PAGINA */
+        footer {
+            background: #51382f;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+            line-height: 2;
+        }
+
+        footer strong {
+            color: #f5b7d0;
+        }
+
+        @media(max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 7px;
+            }
+
+            .inicio h1 {
+                font-size: 34px;
+            }
+
+            .inicio p {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <div class="logo">Bea's Cake ♡</div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#mision">Misión y visión</a>
+            <a href="#contacto">Pedidos</a>
+        </nav>
+    </header>
+
+    <!-- INICIO -->
+    <section class="inicio" id="inicio">
+        <div>
+            <h1>¡Bienvenidos a Bea's Cake!</h1>
+
+            <p>
+                Tu momento, más dulce.
+                <br>
+                Creamos dulces experiencias para tus momentos especiales.
+            </p>
+
+            <a href="#productos" class="boton">
+                Descubre nuestros productos
+            </a>
+        </div>
+    </section>
+
+    <!-- PRODUCTOS -->
+    <section id="productos">
+        <h2 class="titulo">Nuestros productos ♡</h2>
+
+        <div class="productos">
+
+            <div class="producto">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=700"
+                     alt="Pastel personalizado">
+
+                <h3>Pasteles personalizados</h3>
+
+                <p>
+                    Diseños únicos y especiales,
+                    elaborados según tus gustos y preferencias.
+                </p>
+            </div>
+
+            <div class="producto">
+                <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=700"
+                     alt="Pastel tres leches">
+
+                <h3>Pastel de tres leches</h3>
+
+                <p>
+                    Una deliciosa opción para compartir
+                    y disfrutar en cualquier celebración.
+                </p>
+            </div>
+
+            <div class="producto">
+                <img src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?w=700"
+                     alt="Pie">
+
+                <h3>Pies</h3>
+
+                <p>
+                    Deliciosos pies ideales para
+                    acompañar tus momentos especiales.
+                </p>
+            </div>
+
+            <div class="producto">
+                <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=700"
+                     alt="Postres individuales">
+
+                <h3>Postres individuales</h3>
+
+                <p>
+                    Pequeños detalles dulces
+                    para disfrutar en cualquier momento.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- QUIENES SOMOS -->
+    <section class="nosotros" id="nosotros">
+
+        <h2 class="titulo">¿Quiénes somos?</h2>
+
+        <p>
+            Bea's Cake es una pastelería dedicada a la elaboración
+            de pasteles personalizados, tres leches y pies,
+            diseñados para acompañar los momentos más especiales
+            de nuestros clientes.
+
+            <br><br>
+
+            Nos caracterizamos por ofrecer productos elaborados
+            con dedicación, creatividad y atención a los detalles,
+            adaptándonos a los gustos y preferencias de cada persona.
+
+            <br><br>
+
+            Nuestro propósito es convertir cada pedido en una
+            experiencia dulce y memorable.
+        </p>
+
+    </section>
+
+    <!-- MISION Y VISION -->
+    <section id="mision">
+
+        <h2 class="titulo">Nuestra identidad</h2>
+
+        <div class="contenedor">
+
+            <div class="tarjeta">
+                <h3>♡ Nuestra misión</h3>
+
+                <p>
+                    Elaborar y comercializar pasteles, postres
+                    y productos de repostería de alta calidad,
+                    ofreciendo diseños personalizados,
+                    sabores deliciosos y atención cercana,
+                    para acompañar y endulzar los momentos
+                    especiales de nuestros clientes.
+                </p>
+            </div>
+
+            <div class="tarjeta">
+                <h3>♡ Nuestra visión</h3>
+
+                <p>
+                    Ser una pastelería reconocida por su
+                    creatividad, calidad y compromiso con la
+                    satisfacción del cliente, posicionándose
+                    como una opción preferida para la elaboración
+                    de pasteles y postres personalizados.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- VALORES -->
+    <section class="valores">
+
+        <h2 class="titulo">Nuestros valores</h2>
+
+        <ul>
+            <li>♡ Calidad: productos frescos y deliciosos.</li>
+            <li>♡ Creatividad: diseños innovadores y personalizados.</li>
+            <li>♡ Amabilidad: atención cordial y personalizada.</li>
+            <li>♡ Compromiso: satisfacción de nuestros clientes.</li>
+        </ul>
+
+    </section>
+
+    <!-- PEDIDOS -->
+    <section class="pedidos" id="contacto">
+
+        <h2 class="titulo">¡Hagamos tu momento más dulce!</h2>
+
+        <p>
+            Celebra, comparte y disfruta momentos especiales
+            con Bea's Cake.
+        </p>
+
+        <p>
+            Consulta por nuestros pasteles, pies y pedidos especiales.
+        </p>
+
+        <a href="#productos" class="boton">
+            Ver nuestros productos
+        </a>
+
+    </section>
+
+    <!-- PIE DE PAGINA -->
+    <footer>
+
+        <h2>Bea's Cake ♡</h2>
+
+        <p>Un pastel, un momento.</p>
+
+        <p>Pasteles personalizados, tres leches y pies.</p>
+
+        <p>
+            <strong>Tu momento, más dulce.</strong>
+        </p>
+
+        <p>©️ 2026 Bea's Cake. Todos los derechos reservados.</p>
+
+    </footer>
+
+</body>
+</html>
